@@ -19,7 +19,7 @@ VConverter utilizes the powerful FFmpeg library to perform video file conversion
 
 ## Installation
 
-VConverter is available as an executable installer for Windows platforms. You can download the latest installer from [here](link_to_installer).
+VConverter is available as an executable installer for Windows platforms. You can download the latest installer from [here][link_to_installer].
 
 ## How to Use
 
