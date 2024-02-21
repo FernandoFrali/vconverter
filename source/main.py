@@ -18,7 +18,7 @@ def select_files():
             return None
 
     if len(files) == 0:
-        print("No files selected.")
+        print("No files selected, please try again.")
         return None
 
     return files
@@ -47,12 +47,16 @@ def select_type():
 
 def convert_ts_to_mkv():
     input_files = select_files()
+
+    if input_files is None:
+        return
+
     output_type = select_type()
 
     for file in input_files:
         input_type = file.split(".")[-1]
         output_file = file.replace(input_type, output_type)
-        ffmpeg_path = "../ffmpeg/ffmpeg.exe"
+        ffmpeg_path = os.popen("where ffmpeg").read().strip()
 
         try:
             subprocess.run([ffmpeg_path, "-i", file, "-c", "copy", output_file], check=True)
