@@ -17,6 +17,10 @@ def select_files():
             print("Invalid file type. Select files with '.ts', '.mkv', '.mp4' or '.avi' extension.")
             return None
 
+    if len(files) == 0:
+        print("No files selected.")
+        return None
+
     return files
 
 def clean_screen():
