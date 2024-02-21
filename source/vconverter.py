@@ -4,6 +4,7 @@ import tkinter as tk
 from tkinter import filedialog
 
 def select_files():
+    print("Select the files to convert.")
     root = tk.Tk()
     root.withdraw()
 
@@ -47,7 +48,7 @@ def convert_ts_to_mkv():
     for file in input_files:
         input_type = file.split(".")[-1]
         output_file = file.replace(input_type, output_type)
-        ffmpeg_path = os.popen("where ffmpeg").read().strip()
+        ffmpeg_path = "../ffmpeg/ffmpeg.exe"
 
         try:
             subprocess.run([ffmpeg_path, "-i", file, "-c", "copy", output_file], check=True)
