@@ -47,4 +47,4 @@ This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md)
 
 Thank you for choosing VConverter! If you have any questions or encounter any issues, feel free to contact us.
 
-[link_to_installer](https://github.com/FernandoFrali/vconverter/releases)
+[link_to_installer]: https://github.com/FernandoFrali/vconverter/releases
